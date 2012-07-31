@@ -4,6 +4,11 @@ Roqem::Application.routes.draw do
 
   root :to => 'posts#index'
   
+  resources :companies
+  resources :posts
+  
+  match "/company/:company_id/post/:post_token" => "posts#api"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

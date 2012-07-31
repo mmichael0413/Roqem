@@ -11,12 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120730225705) do
+ActiveRecord::Schema.define(:version => 20120731004051) do
 
   create_table "companies", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
     t.string   "name"
+    t.string   "company_token"
+    t.text     "about"
+    t.string   "status"
   end
 
   create_table "posts", :force => true do |t|
@@ -25,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20120730225705) do
     t.string   "title"
     t.text     "body"
     t.integer  "company_id"
+    t.string   "post_token"
   end
 
 end
