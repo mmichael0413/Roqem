@@ -1,1 +1,6 @@
 <h1><u>Roqem</u></h1>
+
+<% @post.each do |post| %>
+	<%= post.title %><br/>
+	<%= post.body %><br/>
+<% end %>
